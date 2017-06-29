@@ -16,20 +16,20 @@ namespace 誕生星座２
                 int[] array2 = new int[13] { 19, 18, 20, 19, 20, 21, 22, 22, 22, 23, 22, 21, 31 };
 
                 Console.Write("あなたの誕生月はいつ？：");
-                int array3 = int.Parse(Console.ReadLine());
-                string month = array1[array3-1];
+                int month1 = int.Parse(Console.ReadLine());
+                string month2 = array1[month1-1];
 
                 Console.Write("あなたの誕生日はいつ？：");
-                int array4 = int.Parse(Console.ReadLine());
+                int date = int.Parse(Console.ReadLine());
 
-                if (array4 > array2[array3 - 1])
+                if (date > array2[month1 - 1])
                 {
-                    month = array1[array3 + 2];
-                    Console.Write("あなたの星座は、" + month + "です。");
+                    month2 = array1[month1 + 2];
+                    Console.Write("あなたの星座は、" + month2 + "です。");
                 }
                 else
                 {
-                    Console.Write("あなたの星座は、" + month + "です。");
+                    Console.Write("あなたの星座は、" + month2 + "です。");
                 }
                 Console.Write("終了したい場合は、『end』と入力してください。");
 
